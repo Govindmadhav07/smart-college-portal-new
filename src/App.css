@@ -1,0 +1,719 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 11px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #1e3a8a;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #172f70;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==================================
+   HOME PAGE - ISOLATED STYLING
+================================== */
+
+.home-page {
+  background-image:
+  linear-gradient(
+    rgba(7, 22, 43, 0.55),
+    rgba(7, 22, 43, 0.65)
+  ),
+  url('/college.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.home-page .home-navbar {
+  width: 100% !important;
+  min-height: 90px !important;
+  padding: 18px 6% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 20px !important;
+  background: rgba(10, 28, 52, 0.45) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+  backdrop-filter: blur(8px);
+}
+
+.home-page .home-brand {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 14px !important;
+  color: #fff !important;
+  text-align: left !important;
+}
+
+.home-page .brand-icon {
+  font-size: 42px !important;
+  line-height: 1 !important;
+}
+
+.home-page .home-brand strong {
+  display: block !important;
+  color: #fff !important;
+  font-size: 25px !important;
+  margin-bottom: 6px !important;
+}
+
+.home-page .home-brand small {
+  display: block !important;
+  color: #e2e8f0 !important;
+  font-size: 14px !important;
+}
+
+.home-page .home-nav-links {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 28px !important;
+}
+
+.home-page .home-nav-links a {
+  display: inline-block !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  padding: 10px 0 !important;
+  border-bottom: 2px solid transparent !important;
+}
+
+.home-page .home-nav-links a:hover {
+  color: #bfdbfe !important;
+  border-bottom-color: #60a5fa !important;
+}
+
+.home-page .home-main {
+  width: 100% !important;
+  background: transparent !important;
+}
+
+.home-page .home-hero {
+  width: 100% !important;
+  max-width: 1250px !important;
+  margin: 0 auto !important;
+  padding: 75px 25px 45px !important;
+  text-align: center !important;
+  background: transparent !important;
+}
+
+.home-page .home-tag {
+  display: inline-block !important;
+  margin-bottom: 20px !important;
+  padding: 9px 16px !important;
+  border: 1px solid rgba(255,255,255,0.4) !important;
+  border-radius: 30px !important;
+  background: rgba(255,255,255,0.12) !important;
+  color: #dbeafe !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+}
+
+.home-page .home-hero > h1 {
+  color: #fff !important;
+  font-size: clamp(30px, 4vw, 46px) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 18px !important;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.5) !important;
+}
+
+.home-page .home-hero > h1 span {
+  color: #bfdbfe !important;
+}
+
+.home-page .home-hero > p {
+  max-width: 780px !important;
+  margin: 0 auto !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+.home-page .login-cards {
+  width: 100% !important;
+  max-width: 1030px !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 24px !important;
+  margin: 45px auto 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  scroll-margin-top: 30px;
+}
+
+.home-page .login-card {
+  min-width: 0 !important;
+  min-height: 330px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 30px 24px 25px !important;
+  background: #fff !important;
+  color: #172033 !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25) !important;
+  text-align: center !important;
+  transition: transform 0.25s, box-shadow 0.25s !important;
+}
+
+.home-page .login-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 20px 42px rgba(0,0,0,0.3) !important;
+}
+
+.home-page .login-icon {
+  width: 82px !important;
+  height: 82px !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 18px !important;
+  border-radius: 50% !important;
+  background: #e5edff !important;
+  font-size: 38px !important;
+}
+
+.home-page .teacher-card .login-icon {
+  background: #dcfce7 !important;
+}
+
+.home-page .admin-card .login-icon {
+  background: #fee2e2 !important;
+}
+
+.home-page .login-card h2 {
+  color: #14213d !important;
+  font-size: 23px !important;
+  margin: 0 0 14px !important;
+}
+
+.home-page .login-card p {
+  min-height: 72px !important;
+  margin: 0 0 20px !important;
+  color: #536176 !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.home-page .login-button {
+  width: 100% !important;
+  min-height: 48px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: auto 0 0 !important;
+  padding: 12px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  transition: 0.2s !important;
+}
+
+.home-page .student-button {
+  background: #2563eb !important;
+}
+
+.home-page .teacher-button {
+  background: #15803d !important;
+}
+
+.home-page .admin-button {
+  background: #dc2626 !important;
+}
+
+.home-page .login-button:hover {
+  color: #fff !important;
+  filter: brightness(1.08);
+  transform: translateY(-2px) !important;
+}
+
+.home-page .home-features {
+  max-width: 850px !important;
+  margin: 0 auto !important;
+  padding: 25px 25px 45px !important;
+  text-align: center !important;
+  background: transparent !important;
+}
+
+.home-page .home-features > span {
+  color: #bfdbfe !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  letter-spacing: 2px !important;
+}
+
+.home-page .home-features h2 {
+  margin: 13px 0 !important;
+  color: #fff !important;
+  font-size: 26px !important;
+}
+
+.home-page .home-features p {
+  color: #f1f5f9 !important;
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+}
+
+.home-page .home-footer {
+  padding: 20px !important;
+  text-align: center !important;
+  color: #e2e8f0 !important;
+  background: rgba(7,22,43,0.55) !important;
+  border-top: 1px solid rgba(255,255,255,0.15) !important;
+  font-size: 13px !important;
+}
+
+/* ==================================
+   LOGIN PAGES
+================================== */
+
+.login {
+  width: 380px;
+  max-width: 90%;
+  margin: 90px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.login h2 {
+  color: #1e3a8a;
+  margin-bottom: 25px;
+}
+
+.login input,
+.hero input,
+.hero textarea,
+.hero select {
+  width: 100%;
+  max-width: 500px;
+  padding: 13px;
+  margin: 7px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: white;
+  color: #222;
+}
+
+.login input:focus,
+.hero input:focus,
+.hero textarea:focus,
+.hero select:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 2px rgba(30,58,138,0.08);
+}
+
+.hero textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero select {
+  cursor: pointer;
+}
+
+.hero select option {
+  color: #222;
+  background: white;
+}
+
+.login button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* ==================================
+   LEGACY HOME CLASSES
+================================== */
+
+.container {
+  min-height: 100vh;
+}
+
+nav {
+  /* background: #1e3a8a; */
+  color: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 22px;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 38px;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  color: #1e3a8a;
+  margin: 25px 0 15px;
+}
+
+.hero p {
+  margin-bottom: 18px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+/* ==================================
+   DASHBOARDS
+================================== */
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboard aside {
+  width: 230px;
+  min-height: 100vh;
+  background: #1e3a8a;
+  color: white;
+  padding: 30px 20px;
+}
+
+.dashboard aside h2 {
+  margin-bottom: 30px;
+}
+
+.dashboard aside a {
+  display: block;
+  margin: 8px 0;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.dashboard aside a:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.dashboard main {
+  flex: 1;
+  min-width: 0;
+  padding: 40px;
+  position: relative;
+}
+
+.dashboard main h1 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* DASHBOARD CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cards > a {
+  color: inherit;
+}
+
+.cards > div,
+.cards > a > div {
+  background: white;
+  padding: 22px;
+  min-height: 120px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  transition: 0.2s;
+}
+
+.cards > div:hover,
+.cards > a > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+.cards h2,
+.cards h3 {
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* TABLES */
+
+table {
+  margin: 30px auto;
+  width: 95%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+th {
+  background: #1e3a8a;
+  color: white;
+}
+
+th,
+td {
+  padding: 13px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+tr:hover td {
+  background: #f8fafc;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ==================================
+   RESPONSIVE
+================================== */
+
+@media (max-width: 900px) {
+  .home-page .home-navbar {
+    padding: 18px 4% !important;
+  }
+
+  .home-page .home-brand strong {
+    font-size: 21px !important;
+  }
+
+  .home-page .home-nav-links {
+    gap: 16px !important;
+  }
+
+  .home-page .login-cards {
+    gap: 14px !important;
+  }
+
+  .home-page .login-card {
+    padding: 25px 15px 22px !important;
+  }
+
+  .home-page .login-card h2 {
+    font-size: 19px !important;
+  }
+
+  .home-page .login-card p {
+    font-size: 14px !important;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard aside {
+    width: 190px;
+  }
+
+  .dashboard main {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .home-page {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+
+  .home-page .home-navbar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 18px 20px !important;
+  }
+
+  .home-page .brand-icon {
+    font-size: 34px !important;
+  }
+
+  .home-page .home-brand strong {
+    font-size: 20px !important;
+  }
+
+  .home-page .home-brand small {
+    font-size: 12px !important;
+  }
+
+  .home-page .home-nav-links {
+    width: 100% !important;
+    justify-content: space-between !important;
+  }
+
+  .home-page .home-hero {
+    padding: 45px 16px 30px !important;
+  }
+
+  .home-page .home-hero > h1 {
+    font-size: 30px !important;
+  }
+
+  .home-page .home-hero > p {
+    font-size: 15px !important;
+  }
+
+  .home-page .login-cards {
+    grid-template-columns: 1fr !important;
+    max-width: 380px !important;
+    gap: 20px !important;
+    margin-top: 30px !important;
+  }
+
+  .home-page .login-card {
+    min-height: 300px !important;
+    padding: 28px 24px !important;
+  }
+
+  .home-page .login-card p {
+    min-height: auto !important;
+  }
+
+  .home-page .home-features h2 {
+    font-size: 23px !important;
+  }
+
+  nav {
+    padding: 15px 20px;
+  }
+
+  nav h2 {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 40px 12px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard aside {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .dashboard aside h2 {
+    margin-bottom: 10px;
+  }
+
+  .dashboard aside a {
+    display: inline-block;
+    margin: 4px;
+  }
+
+  .dashboard main {
+    padding: 25px 15px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons a,
+  .buttons button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .login {
+    margin: 60px auto;
+    padding: 25px;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 9px 6px;
+  }
+}
