@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const API = 'http://localhost:5000/api/fees'
 const ACADEMIC_YEAR = '2026-27'
@@ -137,6 +138,7 @@ export default function StudentFees() {
   const [amount, setAmount] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
+  
 
   const token = localStorage.getItem('token')
 
@@ -410,6 +412,12 @@ export default function StudentFees() {
     <div style={styles.page}>
       <h1 style={styles.heading}>My Fees</h1>
       <p style={styles.muted}>View your fee details and payment history.</p>
+      
+<Link
+  to="/dashboard">
+                <button>← Back to Dashboard</button>
+</Link>
+
 
       {error && (
         <div role="alert" style={{
