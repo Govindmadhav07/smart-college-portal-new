@@ -46,11 +46,9 @@ function Home() {
       <main id="home" className="home-main">
         <section className="home-hero">
           <span className="home-tag">YOUR CAMPUS, DIGITALLY CONNECTED</span>
-
           <h1>
             Welcome to <span>Smart College Portal</span>
           </h1>
-
           <p>
             One platform for managing academics, attendance, results,
             assignments and college activities.
@@ -109,7 +107,8 @@ function Home() {
       </main>
 
       <footer className="home-footer">
-        © {new Date().getFullYear()} Designed and Developed by <strong>Govind Madhav</strong>
+        © {new Date().getFullYear()} Designed and Developed by{' '}
+        <strong>Govind Madhav</strong>
       </footer>
     </div>
   )
@@ -117,7 +116,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/smart-college-portal-new">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -130,7 +129,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/attendance"
           element={
@@ -139,7 +137,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/results"
           element={
@@ -148,7 +145,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/assignments"
           element={
@@ -157,7 +153,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/notices"
           element={
@@ -166,7 +161,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/student-fees"
           element={
@@ -177,7 +171,6 @@ function App() {
         />
 
         <Route path="/teacher-login" element={<TeacherLogin />} />
-
         <Route
           path="/teacher-dashboard"
           element={
@@ -186,7 +179,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/teacher-students"
           element={
@@ -195,7 +187,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/teacher-attendance"
           element={
@@ -204,7 +195,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/teacher-marks"
           element={
@@ -213,7 +203,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/teacher-assignments"
           element={
@@ -222,7 +211,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/teacher-marks-report"
           element={
@@ -233,7 +221,6 @@ function App() {
         />
 
         <Route path="/admin-login" element={<AdminLogin />} />
-
         <Route
           path="/admin-dashboard"
           element={
@@ -242,7 +229,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/admin-students"
           element={
@@ -251,7 +237,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/admin-teachers"
           element={
@@ -260,7 +245,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/admin-courses"
           element={
@@ -269,7 +253,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/admin-notices"
           element={
@@ -278,7 +261,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/admin-fees"
           element={
