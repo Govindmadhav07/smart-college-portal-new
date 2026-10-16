@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logout from './Logout'
 
-const API = 'http://localhost:5000/api'
+const API = 'https://smart-college-management-portal.onrender.com/api'
 
 function AdminFees() {
   const [students, setStudents] = useState([])

@@ -13,7 +13,7 @@ function TeacherMarksReport() {
         const token = localStorage.getItem('token')
 
         const res = await fetch(
-          'http://localhost:5000/api/assignments/report',
+          'https://smart-college-management-portal.onrender.com/api/assignments/report',
           {
             headers: {
               Authorization: `Bearer ${token}`

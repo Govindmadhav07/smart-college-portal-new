@@ -15,7 +15,7 @@ function AdminStudents() {
   const getStudents = async () => {
     try {
       const res = await fetch(
-        'http://localhost:5000/api/students'
+        'https://smart-college-management-portal.onrender.com/api/students'
       )
 
       const data = await res.json()
@@ -45,7 +45,7 @@ function AdminStudents() {
       setLoading(true)
 
       const res = await fetch(
-        'http://localhost:5000/api/students',
+        'https://smart-college-management-portal.onrender.com/api/students',
         {
           method: 'POST',
           headers: {
@@ -91,7 +91,7 @@ function AdminStudents() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/students/${id}`,
+        `https://smart-college-management-portal.onrender.com/api/students/${id}`,
         {
           method: 'DELETE'
         }
@@ -119,7 +119,7 @@ function AdminStudents() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/students/${studentData._id}`,
+        `https://smart-college-management-portal.onrender.com/api/students/${studentData._id}`,
         {
           method: 'PUT',
           headers: {

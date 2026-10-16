@@ -21,10 +21,10 @@ function AdminDashboard() {
           coursesRes,
           noticesRes
         ] = await Promise.all([
-          fetch('http://localhost:5000/api/students'),
-          fetch('http://localhost:5000/api/teachers'),
-          fetch('http://localhost:5000/api/courses'),
-          fetch('http://localhost:5000/api/notices')
+          fetch('https://smart-college-management-portal.onrender.com/api/students'),
+          fetch('https://smart-college-management-portal.onrender.com/api/teachers'),
+          fetch('https://smart-college-management-portal.onrender.com/api/courses'),
+          fetch('https://smart-college-management-portal.onrender.com/api/notices')
         ])
 
         if (studentsRes.ok) {

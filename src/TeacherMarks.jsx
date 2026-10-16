@@ -15,7 +15,7 @@ function TeacherMarks() {
     const getStudents = async () => {
         try {
             const res = await fetch(
-                'http://localhost:5000/api/students'
+                'https://smart-college-management-portal.onrender.com/api/students'
             )
 
             if (!res.ok) {
@@ -32,7 +32,7 @@ function TeacherMarks() {
     const getResults = async () => {
         try {
             const res = await fetch(
-                `http://localhost:5000/api/results?t=${Date.now()}`
+                `https://smart-college-management-portal.onrender.com/api/results?t=${Date.now()}`
             )
 
             if (!res.ok) {
@@ -77,7 +77,7 @@ function TeacherMarks() {
 
         try {
             const res = await fetch(
-                'http://localhost:5000/api/results',
+                'https://smart-college-management-portal.onrender.com/api/results',
                 {
                     method: 'POST',
                     headers: {
@@ -136,7 +136,7 @@ function TeacherMarks() {
 
         try {
             const res = await fetch(
-                `http://localhost:5000/api/results/${resultData._id}`,
+                `https://smart-college-management-portal.onrender.com/api/results/${resultData._id}`,
                 {
                     method: 'PUT',
                     headers: {
@@ -171,7 +171,7 @@ function TeacherMarks() {
 
         try {
             const res = await fetch(
-                `http://localhost:5000/api/results/${id}`,
+                `https://smart-college-management-portal.onrender.com/api/results/${id}`,
                 {
                     method: 'DELETE'
                 }

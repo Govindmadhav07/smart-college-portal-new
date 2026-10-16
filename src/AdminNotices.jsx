@@ -13,7 +13,7 @@ function AdminNotices() {
   const getNotices = async () => {
     try {
       const res = await fetch(
-        'http://localhost:5000/api/notices'
+        'https://smart-college-management-portal.onrender.com/api/notices'
       )
 
       if (!res.ok) {
@@ -42,7 +42,7 @@ function AdminNotices() {
       setLoading(true)
 
       const res = await fetch(
-        'http://localhost:5000/api/notices',
+        'https://smart-college-management-portal.onrender.com/api/notices',
         {
           method: 'POST',
           headers: {
@@ -96,7 +96,7 @@ function AdminNotices() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/notices/${noticeData._id}`,
+        `https://smart-college-management-portal.onrender.com/api/notices/${noticeData._id}`,
         {
           method: 'PUT',
           headers: {
@@ -132,7 +132,7 @@ function AdminNotices() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/notices/${id}`,
+        `https://smart-college-management-portal.onrender.com/api/notices/${id}`,
         {
           method: 'DELETE'
         }

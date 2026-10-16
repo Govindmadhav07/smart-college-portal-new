@@ -10,7 +10,7 @@ function TeacherStudents() {
     const getStudents = async () => {
       try {
         const res = await fetch(
-          'http://localhost:5000/api/students'
+          'https://smart-college-management-portal.onrender.com/api/students'
         )
 
         if (!res.ok) {

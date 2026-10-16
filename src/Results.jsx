@@ -16,7 +16,7 @@ function Results() {
                 }
 
                 const res = await fetch(
-                    `http://localhost:5000/api/results?email=${encodeURIComponent(email)}`
+                    `https://smart-college-management-portal.onrender.com/api/results?email=${encodeURIComponent(email)}`
                 )
 
                 if (!res.ok) {

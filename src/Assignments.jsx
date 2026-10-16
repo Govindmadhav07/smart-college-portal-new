@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const API = 'http://localhost:5000/api/assignments'
+const API = 'https://smart-college-management-portal.onrender.com/api/assignments'
 
 function Assignments() {
   const [assignments, setAssignments] = useState([])

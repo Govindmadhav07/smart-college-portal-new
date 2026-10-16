@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const API = 'http://localhost:5000/api/fees'
+const API = 'https://smart-college-management-portal.onrender.com/api/fees'
 const ACADEMIC_YEAR = '2026-27'
 
 function loadRazorpayScript() {

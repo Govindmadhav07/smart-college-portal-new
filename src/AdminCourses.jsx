@@ -13,7 +13,7 @@ function AdminCourses() {
   const getCourses = async () => {
     try {
       const res = await fetch(
-        'http://localhost:5000/api/courses'
+        'https://smart-college-management-portal.onrender.com/api/courses'
       )
 
       if (!res.ok) {
@@ -42,7 +42,7 @@ function AdminCourses() {
       setLoading(true)
 
       const res = await fetch(
-        'http://localhost:5000/api/courses',
+        'https://smart-college-management-portal.onrender.com/api/courses',
         {
           method: 'POST',
           headers: {
@@ -87,7 +87,7 @@ function AdminCourses() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/courses/${courseData._id}`,
+        `https://smart-college-management-portal.onrender.com/api/courses/${courseData._id}`,
         {
           method: 'PUT',
           headers: {
@@ -122,7 +122,7 @@ function AdminCourses() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/courses/${id}`,
+        `https://smart-college-management-portal.onrender.com/api/courses/${id}`,
         {
           method: 'DELETE'
         }

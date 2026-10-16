@@ -14,7 +14,7 @@ function TeacherAttendance() {
   const getStudents = async () => {
     try {
       const res = await fetch(
-        'http://localhost:5000/api/students'
+        'https://smart-college-management-portal.onrender.com/api/students'
       )
 
       const result = await res.json()
@@ -27,7 +27,7 @@ function TeacherAttendance() {
   const getAttendance = async () => {
   try {
     const res = await fetch(
-      `http://localhost:5000/api/attendance?t=${Date.now()}`,
+      `https://smart-college-management-portal.onrender.com/api/attendance?t=${Date.now()}`,
       {
         cache: 'no-store'
       }
@@ -68,7 +68,7 @@ function TeacherAttendance() {
 
     try {
       const res = await fetch(
-        'http://localhost:5000/api/attendance',
+        'https://smart-college-management-portal.onrender.com/api/attendance',
         {
           method: 'POST',
           headers: {
@@ -121,7 +121,7 @@ function TeacherAttendance() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/attendance/${attendanceData._id}`,
+        `https://smart-college-management-portal.onrender.com/api/attendance/${attendanceData._id}`,
         {
           method: 'PUT',
           headers: {
@@ -156,7 +156,7 @@ function TeacherAttendance() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/attendance/${id}`,
+        `https://smart-college-management-portal.onrender.com/api/attendance/${id}`,
         {
           method: 'DELETE'
         }

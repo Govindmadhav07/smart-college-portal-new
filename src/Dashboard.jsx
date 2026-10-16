@@ -32,14 +32,14 @@ function Dashboard() {
           feesRes
         ] = await Promise.all([
           fetch(
-            `http://localhost:5000/api/attendance?email=${encodeURIComponent(email)}`
+            `https://smart-college-management-portal.onrender.com/api/attendance?email=${encodeURIComponent(email)}`
           ),
           fetch(
-            `http://localhost:5000/api/results?email=${encodeURIComponent(email)}`
+            `https://smart-college-management-portal.onrender.com/api/results?email=${encodeURIComponent(email)}`
           ),
-          fetch('http://localhost:5000/api/assignments'),
-          fetch('http://localhost:5000/api/notices'),
-          fetch('http://localhost:5000/api/fees/mine', {
+          fetch('https://smart-college-management-portal.onrender.com/api/assignments'),
+          fetch('https://smart-college-management-portal.onrender.com/api/notices'),
+          fetch('https://smart-college-management-portal.onrender.com/api/fees/mine', {
             headers
           })
         ])

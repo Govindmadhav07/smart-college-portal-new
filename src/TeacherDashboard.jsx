@@ -21,10 +21,10 @@ function TeacherDashboard() {
           resultsRes,
           assignmentsRes
         ] = await Promise.all([
-          fetch('http://localhost:5000/api/students'),
-          fetch('http://localhost:5000/api/attendance'),
-          fetch('http://localhost:5000/api/results'),
-          fetch('http://localhost:5000/api/assignments')
+          fetch('https://smart-college-management-portal.onrender.com/api/students'),
+          fetch('https://smart-college-management-portal.onrender.com/api/attendance'),
+          fetch('https://smart-college-management-portal.onrender.com/api/results'),
+          fetch('https://smart-college-management-portal.onrender.com/api/assignments')
         ])
 
         if (studentsRes.ok) {

@@ -14,7 +14,7 @@ function AdminTeachers() {
     const getTeachers = async () => {
         try {
             const res = await fetch(
-                'http://localhost:5000/api/teachers'
+                'https://smart-college-management-portal.onrender.com/api/teachers'
             )
 
             if (!res.ok) {
@@ -47,7 +47,7 @@ function AdminTeachers() {
             setLoading(true)
 
             const res = await fetch(
-                'http://localhost:5000/api/teachers',
+                'https://smart-college-management-portal.onrender.com/api/teachers',
                 {
                     method: 'POST',
                     headers: {
@@ -90,7 +90,7 @@ function AdminTeachers() {
 
         try {
             const res = await fetch(
-                `http://localhost:5000/api/teachers/${teacherData._id}`,
+                `https://smart-college-management-portal.onrender.com/api/teachers/${teacherData._id}`,
                 {
                     method: 'PUT',
                     headers: {
@@ -125,7 +125,7 @@ function AdminTeachers() {
 
         try {
             const res = await fetch(
-                `http://localhost:5000/api/teachers/${id}`,
+                `https://smart-college-management-portal.onrender.com/api/teachers/${id}`,
                 {
                     method: 'DELETE'
                 }

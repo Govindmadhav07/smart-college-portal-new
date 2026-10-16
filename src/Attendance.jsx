@@ -16,7 +16,7 @@ function Attendance() {
                 }
 
                 const res = await fetch(
-                    `http://localhost:5000/api/attendance?email=${encodeURIComponent(email)}`
+                    `https://smart-college-management-portal.onrender.com/api/attendance?email=${encodeURIComponent(email)}`
                 )
 
                 if (!res.ok) {

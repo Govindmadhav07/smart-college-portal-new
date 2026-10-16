@@ -10,7 +10,7 @@ function Notices() {
     const getNotices = async () => {
       try {
         const res = await fetch(
-          'http://localhost:5000/api/notices'
+          'https://smart-college-management-portal.onrender.com/api/notices'
         )
 
         if (!res.ok) {
