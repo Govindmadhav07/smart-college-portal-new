@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { HashRouter, Routes, Route, Link } from 'react-router-dom'
 import Login from './Login'
 import './App.css'
 import Dashboard from './Dashboard'
@@ -116,7 +116,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter basename="/smart-college-portal-new">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -270,7 +270,7 @@ function App() {
           }
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

@@ -11,7 +11,7 @@ function Login() {
   const [loading, setLoading] = useState(false)
 
   const handleLogin = async () => {
-    if (!login.email || !login.password) {
+    if (!login.email.trim() || !login.password) {
       alert('Please enter email and password')
       return
     }
@@ -21,8 +21,13 @@ function Login() {
     try {
       const res = await fetch(`${API}/auth/login`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(login)
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: login.email.trim(),
+          password: login.password
+        })
       })
 
       const data = await res.json()
@@ -37,37 +42,16 @@ function Login() {
         return
       }
 
-      const studentRes = await fetch(`${API}/students`, {
-        headers: {
-          Authorization: `Bearer ${data.token}`
-        }
-      })
-
-      let student = null
-
-      if (studentRes.ok) {
-        const students = await studentRes.json()
-        const list = Array.isArray(students)
-          ? students
-          : students.students || []
-
-        student = list.find(
-          s => s.email?.toLowerCase() === login.email.trim().toLowerCase()
-        )
-      }
-
       localStorage.setItem('token', data.token)
       localStorage.setItem('role', data.role)
-      localStorage.setItem('email', data.email || login.email)
-      localStorage.setItem(
-        'name',
-        student?.name || data.name || 'Student'
-      )
+      localStorage.setItem('email', data.email || login.email.trim())
+      localStorage.setItem('name', data.name || 'Student')
 
-      window.location.href = `${import.meta.env.BASE_URL}dashboard`
+      // HashRouter-compatible redirect
+      window.location.hash = '/dashboard'
     } catch (error) {
       console.error('Login error:', error)
-      alert('Server se connection nahi ho raha. Backend URL aur CORS check karo.')
+      alert('Server connection failed. Please check the backend and CORS.')
     } finally {
       setLoading(false)
     }
@@ -80,6 +64,7 @@ function Login() {
       <input
         type="email"
         placeholder="Email"
+        autoComplete="username"
         value={login.email}
         onChange={e =>
           setLogin({ ...login, email: e.target.value })
@@ -89,10 +74,14 @@ function Login() {
       <input
         type="password"
         placeholder="Password"
+        autoComplete="current-password"
         value={login.password}
         onChange={e =>
           setLogin({ ...login, password: e.target.value })
         }
+        onKeyDown={e => {
+          if (e.key === 'Enter' && !loading) handleLogin()
+        }}
       />
 
       <button onClick={handleLogin} disabled={loading}>
